@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_launcher_foreground"
+    tools:context=".MainActivity">
+    <TextView
+        android:textColor="#F20"
+        android:textSize="50sp"
+        android:text="Calculator"
+        android:id="@+id/textcalculator"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input1"
+        app:placeholderText="Số thứ nhất"
+        android:hint="Số 1"
+        app:hintTextColor="#F20"
+        app:startIconDrawable="@drawable/ic_input1"
+        app:startIconTint="@null"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="0dp"
+        app:counterMaxLength="5"
+        app:counterEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textcalculator"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionDone"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        app:placeholderText="Số thứ 2"
+        android:id="@+id/input2"
+        android:hint="Số 2"
+        app:hintTextColor="#F20"
+        app:startIconDrawable="@drawable/ic_input2"
+        app:startIconTint="@null"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidth="2dp"
+        app:boxBackgroundMode="outline"
+        app:boxCollapsedPaddingTop="0dp"
+        app:counterMaxLength="5"
+        app:counterEnabled="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input1"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:imeOptions="actionDone"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:inputType="number"
+            android:maxLength="5"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:textColor="#0066FF"
+        android:textSize="20sp"
+        android:text="Result :            "
+        android:id="@+id/textresult"
+        app:layout_constraintBottom_toTopOf="@id/buttoncong"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input2"
+        android:layout_marginRight="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+
+        android:id="@+id/buttoncong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="+"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/buttontru"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textresult"
+        />
+
+    <Button
+        android:id="@+id/buttontru"
+        android:layout_marginRight="30dp"
+        app:layout_constraintStart_toEndOf="@id/buttoncong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textresult"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:text="-"
+        android:layout_height="wrap_content"/>
+    <Button
+
+        android:id="@+id/buttonnhan"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintEnd_toStartOf="@id/buttonchia"
+        app:layout_constraintTop_toBottomOf="@id/buttoncong"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:text="*"
+        android:layout_height="wrap_content"/>
+    <Button
+
+        android:id="@+id/buttonchia"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintTop_toBottomOf="@id/buttontru"
+        app:layout_constraintStart_toEndOf="@id/buttonnhan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:text="/"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
